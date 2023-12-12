@@ -88,6 +88,13 @@ app.get('/help/*', (req, res) => {
         errorMessage: 'Help article not found.'
     })
 })
+app.get('/about/*', (req, res) => {
+    res.render('404', {
+        title: '404',
+        name: 'Andrew Mead',
+        errorMessage: 'about article not found.'
+    })
+})
 
 app.get('*', (req, res) => {
     res.render('404', {
